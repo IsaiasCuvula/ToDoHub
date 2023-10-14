@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Binding var isVisible: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+              Button("LoginView Dismiss") {
+                isVisible = false
+              }
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
+              .background(.purple)
+            }
+        
     }
 }
 
 #Preview {
-    LoginView()
+    LoginView(isVisible: .constant(true))
 }
