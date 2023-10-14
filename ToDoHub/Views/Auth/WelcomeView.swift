@@ -14,10 +14,10 @@ struct WelcomeView: View {
     var body: some View {
       
             VStack{
-                Image(systemName: "lasso.badge.sparkles")
+                Image("TakeNotes")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 240, height: 300)
+                    .aspectRatio(contentMode: .fill)
                     .foregroundStyle(Color.appSecondary)
                     .padding()
                 
@@ -51,8 +51,6 @@ struct WelcomeView: View {
                         .padding()
                         .background(Color.appPrimary)
                         .clipShape(.buttonBorder)
-                    
-                    
                     
                 }
                 
